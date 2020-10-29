@@ -1,7 +1,8 @@
 exports.handler = function(event, context, callback) {
-    const secretContent =
+    const secretContent = `
     <h3>Welcome To the Secret Area</h3>
-    <p>Here we can tell you the sky is <strong>blue</strong>, and two plus two is four.</p>
+    <p>Here we can tell you the sky is <strong>blue</strong>, and two plus two is four.</p>`
+    
     
     let body
     
@@ -23,6 +24,5 @@ exports.handler = function(event, context, callback) {
         callback(null, {
             statusCode: 401
         })
-
     }
 }
